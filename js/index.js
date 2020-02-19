@@ -45,4 +45,5 @@ function clear() {
     display.value = '';
 }
 
-$('.some-fun').click(() => $('p').toggle(3000));
+//$('.some-fun').click(() => $('p').toggle(3000));
+$('.some-fun').click(() => $('p').blur(3000));
