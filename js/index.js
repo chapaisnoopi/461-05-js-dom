@@ -46,4 +46,13 @@ function clear() {
 }
 
 //$('.some-fun').click(() => $('p').toggle(3000));
-$('.some-fun').click(() => $('p').blur());
+$('.some-fun').click(function() {
+  $( "p" ).first().animate({
+    left: 100
+  }, {
+    duration: 1000,
+    step: function( now, fx ){
+      $( "p" ).slice( 1 ).css( "left", now );
+    }
+  });
+});
